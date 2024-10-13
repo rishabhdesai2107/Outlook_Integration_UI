@@ -7,7 +7,9 @@
 
     <!-- Search and Sort Section -->
     <div class="search-sort">
-      <button class="compose-btn">Compose</button>
+      <button class="compose-btn">
+        <i class="fa-solid fa-pencil"></i>Compose
+      </button>
       <input
         class="inpfield"
         type="text"
@@ -124,8 +126,9 @@ export default {
 }
 
 .compose-btn {
-  background-color: #4caf50;
-  color: white;
+  background-color: grey;
+  color: black;
+  width: 200px;
   padding: 10px;
   margin-right: 40px;
   border: none;
