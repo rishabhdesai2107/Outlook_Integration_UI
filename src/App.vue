@@ -2,8 +2,8 @@
   <div class="email-app">
     <!-- Header Section -->
     <header class="header">
-      <h1>Email Dashboard</h1>
       <button class="compose-btn">Compose</button>
+      <h1>Email Dashboard</h1>
     </header>
 
     <!-- Search and Sort Section -->
@@ -86,6 +86,8 @@ export default {
       } else if (sortOption.value === 'subject') {
         return filteredEmails.sort((a, b) => a.subject.localeCompare(b.subject))
       }
+
+      return filteredEmails
     })
 
     const goToDashboard = () => {
@@ -104,7 +106,6 @@ export default {
 
 <style scoped>
 .email-app {
-  width: 600px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
 }
