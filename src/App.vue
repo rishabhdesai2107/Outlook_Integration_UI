@@ -2,14 +2,19 @@
   <div class="email-app">
     <!-- Header Section -->
     <header class="header">
-      <button class="compose-btn">Compose</button>
       <h1>Email Dashboard</h1>
     </header>
 
     <!-- Search and Sort Section -->
     <div class="search-sort">
-      <input type="text" v-model="searchQuery" placeholder="Search emails..." />
-      <select v-model="sortOption">
+      <button class="compose-btn">Compose</button>
+      <input
+        class="inpfield"
+        type="text"
+        v-model="searchQuery"
+        placeholder="Search emails..."
+      />
+      <select class="sortby" v-model="sortOption">
         <option value="date">Sort by Date</option>
         <option value="sender">Sort by Sender</option>
         <option value="subject">Sort by Subject</option>
@@ -122,14 +127,24 @@ export default {
   background-color: #4caf50;
   color: white;
   padding: 10px;
+  margin-right: 40px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
+.inpfield {
+  margin-right: 40px;
+  margin-left: 340px;
+}
+
+.sortby {
+  margin-right: 150px;
+}
+
 .search-sort {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 10px;
   background-color: #f9f9f9;
 }
