@@ -1,52 +1,56 @@
 <template>
   <div class="dashboard">
-    <h1>Dashboard</h1>
-    <div class="card-container">
-      <div class="card">
-        <h2>Users</h2>
-        <p>Total: {{ totalUsers }}</p>
-      </div>
-      <div class="card">
-        <h2>Revenue</h2>
-        <p>${{ totalRevenue }}</p>
-      </div>
-      <div class="card">
-        <h2>Performance</h2>
-        <p>{{ performance }}%</p>
-      </div>
+    <button @click="logout" class="logout-btn">Logout</button>
+    <div class="buttons">
+      <button>Email</button>
+      <button>Calendar</button>
+      <button>Task</button>
+      <button>Contact</button>
     </div>
   </div>
 </template>
 
 <script setup>
-// Composition API - Script setup syntax
-import { ref } from 'vue'
-
-// Defining reactive data
-const totalUsers = ref(120)
-const totalRevenue = ref(15000)
-const performance = ref(85)
+const logout = () => {
+  console.log('Logging out...')
+}
 </script>
 
 <style scoped>
 .dashboard {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 2rem;
+.logout-btn {
+  align-self: flex-end;
   margin-bottom: 20px;
+  background-color: #ff4c4c;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.card-container {
+.buttons {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.card {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+button {
+  background-color: #0078d4;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #005a9e;
 }
 </style>

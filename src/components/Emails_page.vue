@@ -2,7 +2,7 @@
   <div class="email-app">
     <!-- Header Section -->
     <header class="header">
-      <h1>Email Dashboard</h1>
+      <h1>Emails</h1>
     </header>
 
     <!-- Search and Sort Section -->
